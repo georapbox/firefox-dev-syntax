@@ -3,7 +3,11 @@
 atom-text-editor, :host {
   background-color: @very-dark-gray;
   color: @very-light-gray;
-
+  
+  .line.cursor-line {
+    background-color: @syntax-gutter-background-color;
+  }
+  
   .wrap-guide {
     background-color: @light-gray;
   }
