@@ -89,7 +89,7 @@ atom-text-editor .search-results .marker.current-result .region,
   color: @purple;
 
   &.control {
-    color: @purple;
+    color: @light-orange;
   }
 
   &.operator {
@@ -101,7 +101,7 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 
   &.other.unit {
-    color: @orange;
+    color: @green;
   }
 }
 
@@ -117,7 +117,7 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 
   &.numeric {
-    color: @orange;
+    color: @green;
   }
 
   &.other.color {
@@ -130,7 +130,15 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 
 .variable {
-  color: @red;
+  color: @light-orange;
+
+  &.object {
+    color: @very-light-gray;
+  }
+
+  &.property {
+    color: @blue;
+  }
 
   &.interpolation {
     color: darken(@red, 10%);
