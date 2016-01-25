@@ -3,11 +3,16 @@
 atom-text-editor, :host {
   background-color: @very-dark-gray;
   color: @very-light-gray;
-  
+
+  .bracket-matcher .region {
+    border-bottom: 1px solid @blue;
+    z-index: 100;
+  }
+
   .line.cursor-line {
     background-color: @syntax-gutter-background-color;
   }
-  
+
   .wrap-guide {
     background-color: @light-gray;
   }
