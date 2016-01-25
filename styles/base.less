@@ -9,10 +9,6 @@ atom-text-editor, :host {
     z-index: 100;
   }
 
-  .line.cursor-line {
-    background-color: @syntax-gutter-background-color;
-  }
-
   .wrap-guide {
     background-color: @light-gray;
   }
@@ -89,7 +85,7 @@ atom-text-editor .search-results .marker.current-result .region,
   color: @purple;
 
   &.control {
-    color: @light-orange;
+    color: @purple;
   }
 
   &.operator {
@@ -101,7 +97,7 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 
   &.other.unit {
-    color: @green;
+    color: @orange;
   }
 }
 
@@ -117,7 +113,7 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 
   &.numeric {
-    color: @green;
+    color: @orange;
   }
 
   &.other.color {
@@ -130,15 +126,15 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 
 .variable {
-  color: @light-orange;
+  color: @very-light-gray;
 
-  &.object {
-    color: @very-light-gray;
-  }
-
-  &.property {
-    color: @blue;
-  }
+  // &.object.js {
+  //   color: @very-light-gray;
+  // }
+  //
+  // &.property.js {
+  //   color: @blue;
+  // }
 
   &.interpolation {
     color: darken(@red, 10%);
