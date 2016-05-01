@@ -4,13 +4,8 @@ atom-text-editor, :host {
   background-color: @very-dark-gray;
   color: @very-light-gray;
 
-  .bracket-matcher .region {
-    border-bottom: 1px solid @blue;
-    z-index: 100;
-  }
-
   .wrap-guide {
-    background-color: @light-gray;
+    background-color: @gray !important;
   }
 
   .indent-guide {
@@ -41,6 +36,10 @@ atom-text-editor, :host {
   .gutter .line-number:after,
   .fold-marker:after {
     color: @light-gray;
+  }
+
+  .cursor-line {
+    background-color: @syntax-gutter-background-color-selected;
   }
 
   .invisible {
@@ -85,7 +84,7 @@ atom-text-editor .search-results .marker.current-result .region,
   color: @purple;
 
   &.control {
-    color: @purple;
+    color: @light-orange;
   }
 
   &.operator {
@@ -97,7 +96,12 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 
   &.other.unit {
-    color: @orange;
+    color: @green;
+  }
+
+  &.other.default,
+  &.other.important, {
+    color: @light-orange;
   }
 }
 
@@ -106,18 +110,23 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 
 .constant {
-  color: @red;
+  color: @blue;
+
+  &.null,
+  &.undefined {
+    color: @red;
+  }
 
   &.character.escape {
     color: @cyan;
   }
 
   &.numeric {
-    color: @orange;
+    color: @green;
   }
 
   &.other.color {
-    color: @cyan;
+    color: @red;
   }
 
   &.other.symbol {
@@ -126,15 +135,12 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 
 .variable {
-  color: @very-light-gray;
+  color: @blue;
 
-  // &.object.js {
-  //   color: @very-light-gray;
-  // }
-  //
-  // &.property.js {
-  //   color: @blue;
-  // }
+  &.scss,
+  &.less {
+    color: @purple;
+  }
 
   &.interpolation {
     color: darken(@red, 10%);
@@ -169,6 +175,10 @@ atom-text-editor .search-results .marker.current-result .region,
 
 .punctuation {
   &.definition {
+    &.constant {
+      color: @red;
+    }
+
     &.comment {
       color: @light-gray;
     }
@@ -194,6 +204,10 @@ atom-text-editor .search-results .marker.current-result .region,
       color: @purple;
       font-style: italic;
     }
+
+    &.keyword.scss {
+      color: @blue;
+    }
   }
 
   &.section.embedded {
@@ -204,7 +218,11 @@ atom-text-editor .search-results .marker.current-result .region,
 
 .support {
   &.class {
-    color: @light-orange;
+    color: @blue;
+  }
+
+  &.property-name {
+    color: @blue;
   }
 
   &.function  {
